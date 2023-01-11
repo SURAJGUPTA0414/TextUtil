@@ -20,6 +20,7 @@ export default function Form(props) {
     setText(e.target.value)
   }
   return (
+    <>
     <div className="container my-3">
       <h1>
         {props.heading}
@@ -38,5 +39,12 @@ export default function Form(props) {
       <button className="btn btn-primary" onClick={handleUpClick}>Conver to Uppercase</button>
       <button className="btn btn-primary mx-3" onClick={handleLowClick}>Conver to LowerCase</button>
     </div>
+    <div className="container">
+      <h2>Your Summary:</h2>
+      <p>You have total {Text.split(" ").length} word and {Text.length} characters</p>
+      <h2>Preveiw:</h2>
+      <p>{Text}</p>
+    </div>
+    </>
   );
 }
