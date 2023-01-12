@@ -11,13 +11,25 @@ export default function About() {
     const [btn,setbtn] = useState("Enable dark mode")
     
     const handleClick = () => {
-        setMystyle(
+        if(myStyle.color === "black"){
+
+          setMystyle(
             {
                 color:"white",
                 backgroundColor:"black"
             }
         )
         setbtn("Enable Light mode")
+
+        }else{
+          setMystyle(
+            {
+                color:"black",
+                backgroundColor:"white"
+            }
+        )
+        setbtn("Enable Dark mode")
+        }
     }
   return (
     <>
